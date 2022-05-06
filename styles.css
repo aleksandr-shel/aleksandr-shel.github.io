@@ -21,3 +21,8 @@
 .avatar-img{
     border-radius: 90%;
 }
+
+body {
+    background-color: #EAEAEA;
+    position: relative;
+}
