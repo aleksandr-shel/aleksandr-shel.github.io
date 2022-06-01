@@ -1,50 +1,19 @@
-let sectiondivs = document.querySelectorAll('.section-item')
-
-let resume = document.querySelector('.section-item-resume')
-
-let navitems = document.querySelectorAll('.nav-link');
-
-function onVisisble(element, callback){
-    new IntersectionObserver((entries, observer)=>{
-        entries.forEach(entry => {
-            if(entry.intersectionRatio > 0) {
-              callback(element);
-            //   observer.disconnect();
-            }
-          });
-    }).observe(element);
+// add class navbarDark on navbar scroll
+const header = document.querySelector('.navbar');
+console.log(header)
+window.onscroll = function() {
+    const top = window.scrollY;
+    if(top >=100) {
+        header.classList.add('navbarDark');
+    }
+    else {
+        header.classList.remove('navbarDark');
+    }
 }
+// collapse navbar after click on small devices
+const navLinks = document.querySelectorAll('.nav-item')
+const menuToggle = document.getElementById('navbarSupportedContent')
 
-function changeActiveLink(navitemId){
-    navitems.forEach(item => {
-        item.classList.remove('active')
-        if (item.getAttribute("href").substring(1) === navitemId){
-
-            item.classList.add('active')
-        }
-    })
-}
-
-function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    console.log(rect.top + rect.bottom)
-    return (
-        rect.top + rect.bottom >= 0.5 * window.innerHeight
-    );
-}
-
-sectiondivs.forEach(div=>{
-    onVisisble(div, (div)=>{
-        div.classList.add('animation-fadein')
-        setTimeout(() => {
-            div.classList.remove('animation-fadein')
-        }, 1000);
-    })
-})
-
-onVisisble(resume, (resume)=>{
-    resume.classList.add('animation-fadein')
-    setTimeout(() => {
-        resume.classList.remove('animation-fadein')
-    }, 1000);
+navLinks.forEach((l) => {
+    l.addEventListener('click', () => { new bootstrap.Collapse(menuToggle).toggle() })
 })
