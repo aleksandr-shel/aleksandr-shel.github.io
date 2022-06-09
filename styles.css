@@ -76,3 +76,9 @@
     background-color: #808080;
     text-align: center;
 }
+
+.image-card-project{
+    width: 18em;
+    height: 18em;
+    object-fit:fill;
+}
