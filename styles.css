@@ -3,11 +3,26 @@
     background-color: black;
 }
 
+.navbar{
+    text-shadow: 
+        -1px -1px 0px #000,
+         0px -1px 0px #000,
+         1px -1px 0px #000,
+        -1px  0px 0px #000,
+         1px  0px 0px #000,
+        -1px  1px 0px #000,
+         0px  1px 0px #000,
+         1px  1px 0px #000;
+}
+
 /* hero background image */
 .bgimage {
     height:100vh;
-    background: url('images/toronto.jpeg');
+    background-image: url('./images/toronto.jpeg');
+    background-image: -webkit-image-set(url('./images/toronto.jpeg'));
     background-size:cover;
+    background-attachment: fixed;
+    background-position: center;
     position:relative;
 }
 /* text css above hero image*/
@@ -24,6 +39,15 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+    text-shadow: 
+        -1px -1px 0px #000,
+         0px -1px 0px #000,
+         1px -1px 0px #000,
+        -1px  0px 0px #000,
+         1px  0px 0px #000,
+        -1px  1px 0px #000,
+         0px  1px 0px #000,
+         1px  1px 0px #000;
 }
 
 /* spacing on all sections */
