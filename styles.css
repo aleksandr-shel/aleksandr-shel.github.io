@@ -574,6 +574,10 @@
   flex: 1 1;
 }
 
+.image-card-project > img {
+  width: 100%;
+}
+
 .card-project.slide-left{
   box-shadow: -5px 0 #50C878;
 }
