@@ -32,9 +32,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#skills">Skills</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="#projects">Projects</a>
                     </li>
@@ -85,6 +85,13 @@
             <div class="row mt-4">
                 <div class="col-lg-4 mb-3 js-scroll fade-in-bottom">
                     <img src="images/about.jpeg" class= "imageAboutPage" alt="my photo">
+                    <div style="text-align: center;">
+                        <i class="fa-solid fa-location-dot" style="font-size:1.5em;"></i>
+                        Toronto, Canada
+                    </div>
+                    <div style="margin:1em;display: flex; justify-content: center;">
+                        <a class="about-projects-button" href="#projects">MY PROJECTS</a>
+                    </div>
                 </div>
 
                 <div class="col-lg-8 js-scroll slide-right">
@@ -218,12 +225,24 @@
             <div class="skills-icons">
                 <h2 style="margin-bottom: 1em; text-align:right;">Frameworks & Libraries</h2>
                 <div>
+                    <i class="devicon-bootstrap-plain-wordmark colored" style="font-size: 4em;"></i>
+                    <p>Bootstrap</p>
+                </div>
+                <div>
+                    <i class="devicon-materialui-plain colored" style="font-size: 4em;"></i>
+                    <p>MaterialUI</p>
+                </div>
+                <div>
                     <i class="devicon-redux-original colored" style="font-size: 4em;"></i>
                     <p>Redux</p>
                 </div>
                 <div>
                     <i class="devicon-spring-plain-wordmark colored" style="font-size: 4em;"></i>
                     <p>Spring</p>
+                </div>
+                <div>
+                    <i class="devicon-nodejs-plain-wordmark colored" style="font-size: 4em;"></i>
+                    <p>NodeJs</p>
                 </div>
                 <div>
                     <i class="devicon-react-original-wordmark colored" style="font-size: 4em;"></i>
@@ -235,6 +254,42 @@
                 </div>
             </div>
         </div>
+        <div class="skills-left js-scroll slide-right">
+            <div class="skills-icons">
+                <h2 style="margin-bottom: 1em; text-align:left;">Databases and Cloud</h2>
+                <div>
+                    <i class="devicon-microsoftsqlserver-plain-wordmark colored" style="font-size: 4em;"></i>
+                    <p>SQL Server</p>
+                </div>
+                <div>
+                    <i class="devicon-mysql-plain-wordmark colored" style="font-size: 4em;"></i>
+                    <p>MySQL</p>
+                </div>
+                <div>
+                    <i class="devicon-mongodb-plain-wordmark colored" style="font-size: 4em;"></i>
+                    <p>MongoDB</p>
+                </div>
+                <div>
+                    <i class="devicon-amazonwebservices-plain-wordmark colored" style="font-size: 4em;"></i>
+                    <p>AWS</p>
+                </div>
+            </div>
+            <div class="image-skill">
+                <img src="./images/database.png"/>
+            </div>
+        </div>
+        <div class="skills-right js-scroll slide-left">
+            <div class="image-skill">
+                <img src="./images/management.png"/>
+            </div>
+            <div class="skills-icons">
+                <h2 style="margin-bottom: 1em; text-align:right;">Design & Management</h2>
+                <div>
+                    <i class="devicon-github-original-wordmark colored" style="font-size: 4em;"></i>
+                    <p>GitHub</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     
@@ -242,90 +297,90 @@
     <section id="projects" class="js-scroll slide-left">
         <h1 style="text-align: center; margin-top: 2em;">Featured Projects</h1>
         <div class="projects-list">
-            <div class="col-lg-4 mt-4 js-scroll slide-left">
-                <div class="card">
-                    <img class="card-img-top image-card-project" src="./gifs/Expense tracker.gif" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Expense Tracker</h4>
-                        <p>
-                            <strong>
-                                July 2022
-                            </strong>
-                        </p>
-                        <p class="card-text">
-                            Registered users can keep track of their expenses.
-                            <br/><strong>Technologies: ASP.NET, C#, Entity Framework Core, SQL Server, React, JavaScript, Redux, Material UI</strong>
-                        </p>
-                        <div class="text-center">
-                            <a href="https://expense-tracker-shelukheev.herokuapp.com/" target="_blank" class="btn btn-success">Link</a>
-                            <!-- <a href="https://github.com/aleksandr-shel/sharing-things" target="_blank" class="btn btn-primary">Github</a> -->
-                        </div>
+            <div class="card-project js-scroll slide-left">
+                <div class="card-body">
+                    <h4 class="">Expense Tracker</h4>
+                    <p>
+                        <strong>
+                            July 2022
+                        </strong>
+                    </p>
+                    <p class="">
+                        Registered users can keep track of their expenses.
+                        <br/><strong>Technologies: ASP.NET, C#, Entity Framework Core, SQL Server, React, JavaScript, Redux, Material UI</strong>
+                    </p>
+                    <div class="text-center">
+                        <a href="https://expense-tracker-shelukheev.herokuapp.com/" target="_blank" class="btn btn-success">Link</a>
+                        <a href="https://github.com/aleksandr-shel/expense-tracker" target="_blank" class="btn btn-primary">Github</a>
+                    </div>
+                </div>
+                <div class="image-card-project">
+                    <img src="./gifs/Expense tracker.gif" alt="Card image">
+                </div>
+            </div>
+            <div class="card-project js-scroll slide-right">
+                <div class="image-card-project">
+                    <img src="./gifs/Sharing things.gif" alt="Card image">
+                </div>
+                <div class="card-body">
+                    <h4 class="">Video Sharing Web application (youtube clone)</h4>
+                    <p>
+                        <strong>
+                            June 2022
+                        </strong>
+                    </p>
+                    <p class="">
+                        Video sharing webapp, users can share videos, like videos and subscribe on other users, and also leave comments under videos
+                        <br/><strong>Technologies: ASP.NET, C#, Entity Framework Core, SQL Server, AWS (S3, DynamoDB, IAM), React, TypeScript, Redux, Bootstrap</strong>
+                    </p>
+                    <div class="text-center">
+                        <a href="https://sharing-things.herokuapp.com" target="_blank" class="btn btn-success">Link</a>
+                        <a href="https://github.com/aleksandr-shel/sharing-things" target="_blank" class="btn btn-primary">Github</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 mt-4 js-scroll slide-right">
-                <div class="card">
-                    <img class="card-img-top image-card-project" src="./gifs/Sharing things.gif" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Video Sharing Web application (youtube clone)</h4>
-                        <p>
-                            <strong>
-                                June 2022
-                            </strong>
-                        </p>
-                        <p class="card-text">
-                            Video sharing webapp, users can share videos, like videos and subscribe on other users, and also leave comments under videos
-                            <br/><strong>Technologies: ASP.NET, C#, Entity Framework Core, SQL Server, AWS (S3, DynamoDB, IAM), React, TypeScript, Redux, Bootstrap</strong>
-                        </p>
-                        <div class="text-center">
-                            <a href="https://sharing-things.herokuapp.com" target="_blank" class="btn btn-success">Link</a>
-                            <a href="https://github.com/aleksandr-shel/sharing-things" target="_blank" class="btn btn-primary">Github</a>
-                        </div>
+            <div class="card-project js-scroll slide-left">
+                <div class="card-body">
+                    <h4 class="">Recipe App</h4>
+                    <p>
+                        <strong>
+                            May 2022
+                        </strong>
+                    </p>
+                    <p class="card-text">
+                        Web application for sharing recipes. <br/>
+                        Developed a whole project using MERN stack with real time functionality.<br/>
+                        Used redux for storage on frontend.
+                        <br/><strong>Technologies: NodeJs, React, Redux, MongoDb, ExpressJs, Socket.io </strong>
+                    </p>
+                    <div class="text-center">
+                        <a href="https://sharing-recipes.herokuapp.com/" target="_blank" class="btn btn-success">Link</a>
+                        <a href="https://github.com/aleksandr-shel/Recipe-Project-React-Node" target="_blank" class="btn btn-primary">Github</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 mt-4 js-scroll slide-left">
-                <div class="card">
-                    <img class="card-img-top image-card-project" src="./gifs/Recipes app.gif" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Recipe App</h4>
-                        <p>
-                            <strong>
-                                May 2022
-                            </strong>
-                        </p>
-                        <p class="card-text">
-                            Web application for sharing recipes. <br/>
-                            Developed a whole project using MERN stack with real time functionality.<br/>
-                            Used redux for storage on frontend.
-                            <br/><strong>Technologies: NodeJs, React, Redux, MongoDb, ExpressJs, Socket.io </strong>
-                        </p>
-                        <div class="text-center">
-                            <a href="https://sharing-recipes.herokuapp.com/" target="_blank" class="btn btn-success">Link</a>
-                            <a href="https://github.com/aleksandr-shel/Recipe-Project-React-Node" target="_blank" class="btn btn-primary">Github</a>
-                        </div>
-                    </div>
+                <div class="image-card-project">
+                    <img src="./gifs/Recipes app.gif" alt="Card image">
                 </div>
             </div>
-            <div class="col-lg-4 mt-4 js-scroll slide-right">
-                <div class="card">
-                    <img class="card-img-top image-card-project" src="./gifs/Task Tracker.gif" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Task Management app for teams</h4>
-                        <p>
-                            <strong>
-                                January 2022 - April 2022
-                            </strong>
-                        </p>
-                        <p class="card-text">
-                            Komanda is a task management application to help developer teams to control development flow. <br/>
-                            Worked on backend and frontend, implemented real-time functionality using websocket
-                            <br/><strong>Technologies: NodeJs, React, MongoDb, ExpressJs, Socket.io </strong>
-                        </p>
-                        <div class="text-center">
-                            <a href="https://komanda.netlify.app/" target="_blank" class="btn btn-success">Link</a>
-                            <a href="https://github.com/aleksandr-shel/komanda" target="_blank" class="btn btn-primary">Github</a>
-                        </div>
+            <div class="card-project js-scroll slide-right">
+                <div class="image-card-project">
+                    <img src="./gifs/Task Tracker.gif" alt="Card image">
+                </div>
+                <div class="card-body">
+                    <h4 class="">Task Management app for teams</h4>
+                    <p>
+                        <strong>
+                            January 2022 - April 2022
+                        </strong>
+                    </p>
+                    <p class="">
+                        Komanda is a task management application to help developer teams to control development flow. <br/>
+                        Worked on backend and frontend, implemented real-time functionality using websocket
+                        <br/><strong>Technologies: NodeJs, React, MongoDb, ExpressJs, Socket.io </strong>
+                    </p>
+                    <div class="text-center">
+                        <a href="https://komanda.netlify.app/" target="_blank" class="btn btn-success">Link</a>
+                        <a href="https://github.com/aleksandr-shel/komanda" target="_blank" class="btn btn-primary">Github</a>
                     </div>
                 </div>
             </div>
@@ -333,7 +388,7 @@
     </section>
     <section id="contact">
         <div class="container mt-3 contactContent">
-            <h2 style="text-align: center;">Contact</h2>
+            <h2 style="text-align: center;">Contact Information</h2>
             <div class="row">
                 <div>
                     Phone Number: (647) 917 4302
