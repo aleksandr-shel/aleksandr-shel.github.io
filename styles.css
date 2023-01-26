@@ -476,10 +476,32 @@
 .skills-list .skill{
   flex: 1 1 33%;
   display: flex;
+  height: 200px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+.skill > p {
+  display: none;
+}
+
+.skill:hover > i + h5 {
+  display: none;
+}
+
+.skill:hover > p{
+  display: block;
+  animation: swirling  1s ease-in-out both;
+}
+
+@keyframes swirling {
+  0% {transform: rotateY(180deg); opacity: 0;}
+  50% {opacity: 100;}
+  100% {transform: rotateY(360deg);}
+}
+
+
 
 .skill > * {
   text-align: center;
