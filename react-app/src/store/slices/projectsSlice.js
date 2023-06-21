@@ -64,7 +64,7 @@ const initialState = {
             link:'',
             video:'',
             images: [
-                './images/komanda.jpg',
+                './images/komanda.JPG',
             ]
         },
     ]
