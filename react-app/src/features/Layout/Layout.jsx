@@ -1,0 +1,103 @@
+import React, { useEffect, useState } from 'react';
+import { Outlet } from 'react-router-dom';
+import styled from 'styled-components';
+
+const Nav = styled.div.attrs((props)=>props)`
+        position: ${(props)=>(props.scrolled==='true'? 'fixed' : 'static')};
+        background-color: #000000;
+        color: white;
+        top: ${(props)=> (props.scrolled ? '0.5em':'0')};
+        display: flex;
+        justify-content: center;
+        width: 50vw;
+        border-radius: 7px;
+        min-width: 500px;
+        z-index: 1000;
+        ${(props)=>(
+            props.scrolled ==='true' ?
+           `left: 50%;
+            transform: translate(-50%, 0);`
+            :
+            `margin: 0 auto;`
+        )}
+
+        .download-link:hover{
+            color:white;
+            background-color: #333333;
+        }
+    `
+
+function Layout() {
+
+    const [scrolled, setScrollTop] = useState('false');
+
+    useEffect(()=>{
+        const handleScroll = () => {
+            setScrollTop(window.scrollY !== 0 ? 'true':'false');
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    },[])
+
+
+    return ( 
+        <>
+            <Nav scrolled={scrolled}>
+                <NavLink to='#portfolio' name='Portfolio'/>
+                <NavLink to='#skills' name='Skills'/>
+                <NavLink to='#projects' name='Projects'>
+                    <NavLink to='#netverse' name='NetVerse'/>
+                    <NavLink to='#sharingthings' name='Sharing Things'/>
+                    <NavLink to='#weatherapp' name='Weather App'/>
+                    <NavLink to='#expensetracker' name='Expense Tracker'/>
+                    <NavLink to='#komanda' name='Komanda'/>
+                </NavLink>
+                <div className='download-link' style={{padding:'0.5em'}}>
+                    <a style={{textDecoration:'none', color:'#d6d6d6'}} href="./files/Aleksandr Shelukheev CV.pdf" target="_blank" download>Download Resume</a>
+                </div>
+                
+            </Nav>
+            <Outlet/>
+        </>
+     );
+}
+
+const NavLinkDiv = styled.a`
+    display: block;
+    padding: 0.5em;
+    position: relative;
+    background-color: #000000;
+    text-decoration: none;
+    color: #d6d6d6;
+    &:hover{
+        background-color: #333333;
+        color:white;
+    }
+    &:hover .link-dropdown{
+        display: block;
+    }
+    .link-dropdown{
+        display: none;
+        position: absolute;
+        z-index: 10;
+        top: 100%;
+        left:0;
+    }
+`
+
+const NavLink = ({to, name, children})=>{
+    return (
+        <NavLinkDiv href={to}>
+            {name}
+            <div className='link-dropdown'>
+                {children}
+            </div>
+        </NavLinkDiv>
+    )
+}
+
+export default Layout;
