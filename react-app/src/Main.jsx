@@ -12,7 +12,6 @@ const AboutDiv = styled.div`
     background-color: white;
 
     .cover-section{
-        
     }
     .cover-section img{
         max-width: 100%;

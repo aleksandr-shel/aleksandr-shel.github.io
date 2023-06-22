@@ -6,6 +6,7 @@ const ProjectDiv = styled.div`
     position: relative;
     border-radius: 10px;
     margin-bottom: 1em;
+    border:1px solid black;
     .images-container{
         display: flex;
         overflow: hidden;
@@ -109,12 +110,17 @@ function Project({project}) {
                     </a>
                 </div>
             </div>
-            <div className='left' onClick={clickLeft}>
-                {'<'}
-            </div>
-            <div className='right' onClick={clickRight}>
-                {'>'}
-            </div>
+            {
+                length > 1 && 
+                <>
+                    <div className='left' onClick={clickLeft}>
+                    {'<'}
+                    </div>
+                    <div className='right' onClick={clickRight}>
+                        {'>'}
+                    </div>
+                </>
+            }
         </ProjectDiv>
      );
 }
