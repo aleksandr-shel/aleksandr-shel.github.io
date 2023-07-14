@@ -16,6 +16,11 @@ const initialState = {
                 './images/social app_4.png',
                 './images/social app_5.png',
                 './images/social app_6.png',
+                './images/social app_7.png',
+                './images/social app_8.png',
+                './images/social app_9.png',
+                './images/social app_10.png',
+                './images/social app_11.png',
             ]
         },
         {

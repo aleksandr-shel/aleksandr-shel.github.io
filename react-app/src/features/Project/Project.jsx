@@ -17,6 +17,7 @@ const ProjectDiv = styled.div`
         display: block;
         position: relative;
         border-radius: 10px;
+        object-fit: contain;
     }
     .name{
         z-index: 9;
@@ -41,6 +42,10 @@ const ProjectDiv = styled.div`
         padding: 0.3em;
         background-color: lightgray;
         border-radius: 10px;
+        opacity: 0;
+    }
+    &:hover .description{
+        opacity: 0.7;
     }
     .links a{
         margin: 0.5em;
