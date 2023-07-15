@@ -112,6 +112,7 @@ function Project({project}) {
                 {project.description}
                 <div className='links'>
                     <a href={project.github} className='fa-brands fa-github' rel='noreferrer' target='_blank'>
+                        GitHub
                     </a>
                 </div>
             </div>
