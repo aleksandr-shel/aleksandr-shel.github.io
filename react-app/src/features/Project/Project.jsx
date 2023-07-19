@@ -54,32 +54,62 @@ const ProjectDiv = styled.div`
         font-size: larger;
     }
     .left{
-        width:50%;
+        border-radius: 50%;
+        width:75px;
+        height: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         z-index: 10;
         position: absolute;
-        height: 100%;
-        top:0;
+        top:50%;
         left: 0;
-        display:flex;
-        justify-content: start;
-        align-items: center;
+        transform: translateY(-50%);
         user-select: none;
         font-size: 80px;
-        opacity: 0.5;
+        opacity: 0.3;
+        background-color: #D3D3D3;
+        &:hover{
+            background-color: #C0C0C0;
+        }
     }
     .right{
-        width:50%;
+        border-radius: 50%;
+        width:75px;
+        height: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         z-index: 10;
         position: absolute;
-        height: 100%;
-        top:0;
+        top:50%;
         right: 0;
-        display:flex;
-        justify-content: end;
-        align-items: center;
+        transform: translateY(-50%);
         user-select: none;
         font-size: 80px;
-        opacity: 0.5;
+        opacity: 0.3;
+        background-color: #D3D3D3;
+        &:hover{
+            background-color: #C0C0C0;
+        }
+    }
+
+    .arrow-right{
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+    }
+
+    .arrow-left{
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
     }
 `
 
@@ -104,9 +134,17 @@ function Project({project}) {
                 })}
             </div>
             <div className='name'>
-                <h4>
-                    {project.name}
-                </h4>
+                {project.link === '' ?
+                    <h4>
+                        {project.name}
+                    </h4>
+                    :
+                    <h4>
+                        <a href={project.link} rel='noreferrer' target='_blank'>
+                            {project.name}
+                        </a>
+                    </h4>
+                }
             </div>
             <div className='description'>
                 {project.description}
@@ -120,10 +158,10 @@ function Project({project}) {
                 length > 1 && 
                 <>
                     <div className='left' onClick={clickLeft}>
-                    {'<'}
+                        <i class="arrow-left"></i>
                     </div>
                     <div className='right' onClick={clickRight}>
-                        {'>'}
+                        <i class="arrow-right"></i>
                     </div>
                 </>
             }

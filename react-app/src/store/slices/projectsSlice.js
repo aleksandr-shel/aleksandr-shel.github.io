@@ -7,7 +7,7 @@ const initialState = {
             name:'NetVerse. Social Media App.',
             description: 'Built a social media app with messaging, following, and posting functionality by using ReactJS, ASP.NET Core, SQL Server, and AWS S3.',
             github:'https://github.com/aleksandr-shel/social-app',
-            link:'',
+            link:'https://netverse.aleksandr-shelukheev.com',
             video:'./videos/Social App.mp4',
             images: [
                 './images/social app_1.png',
@@ -28,7 +28,7 @@ const initialState = {
             name:'Sharing Things. YouTube Clone.',
             description: 'Built a YouTube clone by using ReactJS, ASP.NET Core, SQL Server, and some AWS.',
             github:'https://github.com/aleksandr-shel/sharing-things',
-            link:'',
+            link:'https://sharing-things.aleksandr-shelukheev.com',
             video:'./videos/Sharing Things.mp4',
             images: [
                 './images/sharing things_1.png',
@@ -42,7 +42,7 @@ const initialState = {
             name:'Weather App',
             description: 'Built a weather app that shows the current weather and weather forecast by using ReactJS, Node.js and an open-source API for getting weather data.',
             github:'https://github.com/aleksandr-shel/Weather-App',
-            link:'',
+            link:'https://weather.aleksandr-shelukheev.com',
             video:'./videos/Weather App.mp4',
             images: [
                 './images/weather app_1.png',
@@ -55,7 +55,7 @@ const initialState = {
             name:'Expense Tracker',
             description: 'Built an expense track that helps to keep track of expenses by using ReactJS, ASP.NET Core and MSSQL',
             github:'https://github.com/aleksandr-shel/expense-tracker',
-            link:'',
+            link:'https://expense-tracker.aleksandr-shelukheev.com',
             video:'./videos/Expense Tracker.mp4',
             images: [
                 './images/expense tracker_1.png',
