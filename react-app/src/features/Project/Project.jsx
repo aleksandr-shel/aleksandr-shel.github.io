@@ -4,9 +4,8 @@ import styled from 'styled-components';
 
 const ProjectDiv = styled.div`
     position: relative;
-    border-radius: 10px;
     margin-bottom: 1em;
-    border:1px solid black;
+    box-shadow: 0 0 30px #ccc;
     .images-container{
         display: flex;
         overflow: hidden;
@@ -16,7 +15,6 @@ const ProjectDiv = styled.div`
         max-height: 100%;
         display: block;
         position: relative;
-        border-radius: 10px;
         object-fit: contain;
     }
     .name{
@@ -26,7 +24,6 @@ const ProjectDiv = styled.div`
         width: 100%;
         left: 50%;
         transform: translate(-50%, 0);
-        /* background-color: lightgray; */
         border-radius: 10px;
     }
     .name h4{
@@ -34,18 +31,8 @@ const ProjectDiv = styled.div`
         text-decoration: underline;
     }
     .description{
-        z-index: 11;
-        position: absolute;
         width: 100%;
-        left:0;
-        bottom: 0;
         padding: 0.3em;
-        background-color: lightgray;
-        border-radius: 10px;
-        opacity: 0;
-    }
-    &:hover .description{
-        opacity: 0.7;
     }
     .links a{
         margin: 0.5em;
@@ -73,6 +60,9 @@ const ProjectDiv = styled.div`
             background-color: #C0C0C0;
         }
     }
+    .left:active{
+        box-shadow: 0 0 20px black;
+    }
     .right{
         border-radius: 50%;
         width:75px;
@@ -93,7 +83,9 @@ const ProjectDiv = styled.div`
             background-color: #C0C0C0;
         }
     }
-
+    .right:active{
+        box-shadow: 0 0 20px black;
+    }
     .arrow-right{
         border: solid black;
         border-width: 0 3px 3px 0;
@@ -110,6 +102,10 @@ const ProjectDiv = styled.div`
         padding: 3px;
         transform: rotate(135deg);
         -webkit-transform: rotate(135deg);
+    }
+
+    &:hover{
+        transform: scale(1.08);
     }
 `
 

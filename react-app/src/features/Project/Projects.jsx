@@ -4,11 +4,17 @@ import { styled } from 'styled-components';
 import {useSelector} from 'react-redux';
 
 const ProjectsDiv = styled.div`
-    width: 50vw;
     margin: 1em auto;
     min-width: 500px;
     h3{
         text-align: center;
+    }
+    width: 50vw;
+    @media screen and (max-width: 2000px) {
+        width: 55vw;
+    }
+    @media screen and (max-width: 992px) {
+        width: 80vw;
     }
 `
 
@@ -19,7 +25,7 @@ function Projects() {
         <ProjectsDiv id='projects'>
             <h3>
                 Featured Projects
-                <hr/>
+                {/* <hr/> */}
             </h3>
             {
                 projects.map(project=>
