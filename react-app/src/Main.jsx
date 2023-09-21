@@ -132,7 +132,7 @@ function Main() {
                         </div>
                         <div className='location'>
                             <i className="fa-sharp fa-solid fa-location-dot"></i>
-                            North York, Toronto, Ontario, Canada
+                            North York, Toronto, ON, Canada
                         </div>
                         <div className='contact-div'>
                             <div style={{marginRight:'0.5em'}} onClick={handleClickEmail}>
