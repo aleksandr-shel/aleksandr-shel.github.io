@@ -3,24 +3,27 @@ import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Nav = styled.div.attrs((props)=>props)`
-        position: ${(props)=>(props.scrolled==='true'? 'fixed' : 'static')};
         background-color: #000000;
         color: white;
-        top: ${(props)=> (props.scrolled ? '0.5em':'0')};
+        top: 0;
         display: flex;
         justify-content: center;
         width: 50vw;
+        height: 40px;
         border-radius: 7px;
-        min-width: 500px;
+        min-width: 350px;
         z-index: 1000;
-        ${(props)=>(
+        /* position: ${(props)=>(props.scrolled==='true'? 'fixed' : 'static')}; */
+        /* ${(props)=>(
             props.scrolled ==='true' ?
            `left: 50%;
             transform: translate(-50%, 0);`
             :
             `margin: 0 auto;`
-        )}
-
+        )} */
+        position:fixed;
+        left: 50%;
+        transform: translate(-50%, 0);
         .download-link:hover{
             color:white;
             background-color: #333333;
@@ -72,7 +75,9 @@ const NavLinkDiv = styled.a`
     position: relative;
     background-color: #000000;
     text-decoration: none;
+    border-radius: 7px;
     color: #d6d6d6;
+    white-space: nowrap;
     &:hover{
         background-color: #333333;
         color:white;

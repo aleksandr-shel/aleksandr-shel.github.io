@@ -5,7 +5,7 @@ import {useSelector} from 'react-redux';
 
 const ProjectsDiv = styled.div`
     margin: 1em auto;
-    min-width: 500px;
+    min-width: 350px;
     h3{
         text-align: center;
     }

@@ -7,10 +7,10 @@ import Education from './features/Education/Education';
 const AboutDiv = styled.div`
     width: 60vw;
     margin: 1em auto;
-    min-width: 600px;
+    margin-top: 40px;
+    min-width: 350px;
     border-radius: 10px;
     background-color: white;
-
     .cover-section{
     }
     .cover-section img{
@@ -24,11 +24,17 @@ const AboutDiv = styled.div`
     }
     .avatar-div{
         position: relative;
-        top: -100px;
+        top: -10px;
+        min-width: 60px;
+        min-height: 60px;
+        width: 25%;
+        height: 25%;
     }
     .avatar-div img{
-        width: 200px;
-        height: 200px;
+        /* width: 200px;
+        height: 200px; */
+        width: 100%;
+        height: 100%;
         border-radius: 50%;
         border: 5px solid white;
     }
@@ -72,6 +78,12 @@ const AboutDiv = styled.div`
     }
     @media screen and (max-width: 1200px) {
         .contact-div{
+            flex-wrap: wrap;
+        }
+        .contact-div > *{
+            margin-top: 0.5em;
+        }
+        .about-section{
             flex-wrap: wrap;
         }
     }

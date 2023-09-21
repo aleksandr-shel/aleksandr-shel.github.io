@@ -6,13 +6,14 @@ import { styled } from 'styled-components';
 const SkillsDiv = styled.div`
     width: 50vw;
     margin: 1em auto;
-    min-width: 500px;
+    min-width: 350px;
     h3{
         text-align: center;
     }
     .skills-icons{
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
     }
     .skills-icons > div{
         margin: 0.5em;
