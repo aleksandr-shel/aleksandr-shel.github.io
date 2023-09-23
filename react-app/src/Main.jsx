@@ -14,8 +14,8 @@ const AboutDiv = styled.div`
     .cover-section{
     }
     .cover-section img{
-        max-width: 100%;
-        max-height: 100%;
+        width: 100%;
+        height: 100%;
         display: block;
         border-radius: 10px;
     }
@@ -86,6 +86,9 @@ const AboutDiv = styled.div`
         .about-section{
             flex-wrap: wrap;
         }
+    }
+    @media screen and (min-width: 2000px){
+        font-size: x-large;
     }
 `
 
