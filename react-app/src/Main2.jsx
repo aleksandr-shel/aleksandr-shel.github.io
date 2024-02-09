@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import Skills from './features/Skills/Skills';
 import Projects from './features/Project/Projects';
-import { useState } from 'react';
+import Skills from './features/Skills/Skills';
 import Education from './features/Education/Education';
 
 const AboutDiv = styled.div`
@@ -12,11 +11,20 @@ const AboutDiv = styled.div`
     min-width: 350px;
     border-radius: 10px;
     background-color: white;
+    .cover-section{
+    }
+    .cover-section img{
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 10px;
+    }
     .about-section{
         display: flex;
     }
     .avatar-div{
         position: relative;
+        top: -10px;
         min-width: 60px;
         min-height: 60px;
         width: 25%;
@@ -68,15 +76,6 @@ const AboutDiv = styled.div`
         text-decoration: none;
         color: black;
     }
-    hr{
-        /* background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-        border:0;
-        height: 2px; */
-        border: 0;
-        height: 2px;
-        background-image: linear-gradient(to left, rgba(0, 0, 0, 0), black, rgba(0, 0, 0, 0));
-        border-radius: 5px;
-    }
     @media screen and (max-width: 1200px) {
         .contact-div{
             flex-wrap: wrap;
@@ -94,6 +93,7 @@ const AboutDiv = styled.div`
 `
 
 function Main() {
+
     const [copiedPhone, setCopiedPhone] = useState(false);
     const [copiedEmail, setCopiedEmail] = useState(false);
     function handleClickPhonenumber(){
@@ -118,7 +118,10 @@ function Main() {
 
     return ( 
         <>
-            <AboutDiv>
+            <AboutDiv id='portfolio'>
+                <div className='cover-section'>
+                    <img src='./images/cover.jpg' alt='cover'/>
+                </div>
                 <div className='about-section'>
                     <div className='avatar-div'>
                         <img src='./images/me_2.jpg' alt='avatar'/>
@@ -128,7 +131,7 @@ function Main() {
                             Aleksandr Shelukheev
                         </div>
                         <div style={{whiteSpace:'pre-line'}}>
-                            {"Web Developer, Software Developer\nAlso interested in AI"}
+                            {"Software Engineer. I specialize in full-stack web development in \n.NET Core (C#), React, Node.js/Express.js and Spring Boot. I am also interested in machine learning."}
                         </div>
                         <div className='location'>
                             <i className="fa-sharp fa-solid fa-location-dot"></i>
@@ -156,19 +159,17 @@ function Main() {
                                 }
                             </div>
                         </div>
-                        <div className='links'>
-                            <a href='https://www.linkedin.com/in/alex-shel/' className='fa-brands fa-linkedin'  rel='noreferrer' target='_blank'>
-                            </a>
-                            <a href='https://www.instagram.com/alexshelshel/' className='fa-brands fa-instagram'  rel='noreferrer' target='_blank'>
-                            </a>
-                            <a href='https://www.facebook.com/profile.php?id=100013570871269' className='fa-brands fa-facebook'  rel='noreferrer' target='_blank'>
-                            </a>
-                        </div>
                         <Education/>
                     </div>
-                    
+                    <div className='links'>
+                        <a href='https://www.linkedin.com/in/alex-shel/' className='fa-brands fa-linkedin'  rel='noreferrer' target='_blank'>
+                        </a>
+                        <a href='https://www.instagram.com/alexshelshel/' className='fa-brands fa-instagram'  rel='noreferrer' target='_blank'>
+                        </a>
+                        <a href='https://www.facebook.com/profile.php?id=100013570871269' className='fa-brands fa-facebook'  rel='noreferrer' target='_blank'>
+                        </a>
+                    </div>
                 </div>
-                <hr/>
             </AboutDiv>
             <Skills/>
             <Projects/>

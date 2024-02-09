@@ -8,7 +8,7 @@ const Nav = styled.div.attrs((props)=>props)`
         top: 0;
         display: flex;
         justify-content: center;
-        width: 50vw;
+        width: 60vw;
         height: 40px;
         border-radius: 7px;
         min-width: 350px;

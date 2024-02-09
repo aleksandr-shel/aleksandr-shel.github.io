@@ -9,13 +9,34 @@ const ProjectsDiv = styled.div`
     h3{
         text-align: center;
     }
-    width: 50vw;
-    @media screen and (max-width: 2000px) {
-        width: 55vw;
+    width: 65vw;
+    @media screen and (min-width: 1200px) {
+        width: 70vw;
+        .projects{
+            grid-template-columns: auto auto auto;
+            column-gap: 10px;
+            row-gap: 10px;
+        }
     }
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 1200px) {
+        .projects{
+            grid-template-columns: auto auto;
+            column-gap: 10px;
+            row-gap: 10px;
+        }
+    }
+    @media screen and (max-width: 850px) {
         width: 80vw;
+        .projects{
+            grid-template-columns: auto;
+            column-gap: 10px;
+            row-gap: 10px;
+        }
     }
+    .projects{
+        display: grid;
+    }
+
 `
 
 function Projects() {
@@ -24,17 +45,18 @@ function Projects() {
     return ( 
         <ProjectsDiv id='projects'>
             <h3>
-                Featured Projects
+                pet projects
                 {/* <hr/> */}
             </h3>
-            {
-                projects.map(project=>
+            <div className='projects'>
+                {
+                    projects.map(project=>
                     (
                     <Fragment key={project.name}>
                         <Project project={project}/>
-                        <hr/>
                     </Fragment>))
-            }
+                }
+            </div>
         </ProjectsDiv>
      );
 }

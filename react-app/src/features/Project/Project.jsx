@@ -29,6 +29,10 @@ const ProjectDiv = styled.div`
     .name h4{
         text-align: center;
         text-decoration: underline;
+        color:black;
+    }
+    .name h4 a{
+        color:black;
     }
     .description{
         width: 100%;
@@ -44,7 +48,7 @@ const ProjectDiv = styled.div`
         border-radius: 50%;
         width:75px;
         height: 75px;
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         z-index: 10;
@@ -67,7 +71,7 @@ const ProjectDiv = styled.div`
         border-radius: 50%;
         width:75px;
         height: 75px;
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         z-index: 10;
@@ -104,9 +108,15 @@ const ProjectDiv = styled.div`
         -webkit-transform: rotate(135deg);
     }
 
-    &:hover{
-        transform: scale(1.08);
+    &:hover .left{
+        display:flex;
     }
+    &:hover .right{
+        display: flex;
+    }
+    /* &:hover{
+        transform: scale(1.002);
+    } */
 `
 
 function Project({project}) {

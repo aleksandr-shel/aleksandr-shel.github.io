@@ -27,8 +27,7 @@ function Skills() {
     return ( 
         <SkillsDiv id='skills'>
             <h3>
-                Skills
-                <hr/>
+                skills
             </h3>
             <div className="skills-icons">
                 <div>
