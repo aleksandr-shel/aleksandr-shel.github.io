@@ -4,39 +4,20 @@ import { styled } from 'styled-components';
 import {useSelector} from 'react-redux';
 
 const ProjectsDiv = styled.div`
-    margin: 1em auto;
+    margin: 2em auto;
+    width: 100%;
+    max-width: 624px;
     min-width: 350px;
-    h3{
-        text-align: center;
-    }
-    width: 65vw;
-    @media screen and (min-width: 1200px) {
-        width: 70vw;
-        .projects{
-            grid-template-columns: auto auto auto;
-            column-gap: 10px;
-            row-gap: 10px;
-        }
-    }
-    @media screen and (max-width: 1200px) {
-        .projects{
-            grid-template-columns: auto auto;
-            column-gap: 10px;
-            row-gap: 10px;
-        }
-    }
-    @media screen and (max-width: 850px) {
-        width: 80vw;
-        .projects{
-            grid-template-columns: auto;
-            column-gap: 10px;
-            row-gap: 10px;
-        }
-    }
+    display: flex;
+    flex-direction: row;
     .projects{
-        display: grid;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
     }
-
+    .title{
+        margin-right: 1em;
+    }
 `
 
 function Projects() {
@@ -44,10 +25,11 @@ function Projects() {
     const {projects} = useSelector(state => state.projectsReducer);
     return ( 
         <ProjectsDiv id='projects'>
-            <h3>
-                pet projects
-                {/* <hr/> */}
-            </h3>
+            <div className='title'>
+                <h5>
+                    Projects
+                </h5>
+            </div>
             <div className='projects'>
                 {
                     projects.map(project=>
